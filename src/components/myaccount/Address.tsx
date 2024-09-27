@@ -1,14 +1,4 @@
-// import React from 'react';
 
-// const Address: React.FC = () => {
-//   return (
-//     <div>
-//       address
-//     </div>
-//   );
-// };
-
-// export default Address;
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Header from "../Header";
@@ -32,7 +22,7 @@ const Address: React.FC = () => {
     setIsEditing(!isEditing);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     const updatedAddresses = addresses.map((address, index) =>
       index === selectedAddressIndex ? { ...address, [name]: value } : address
@@ -59,10 +49,10 @@ const Address: React.FC = () => {
     setIsEditing(true);
   };
 
-  const handleAddressSelect = (index) => {
-    setSelectedAddressIndex(index);
-    setIsEditing(false);
-  };
+  // const handleAddressSelect = (index : any) => {
+  //   setSelectedAddressIndex(index);
+  //   setIsEditing(false);
+  // };
 
   return (
     <div>
@@ -112,7 +102,6 @@ const Address: React.FC = () => {
                       <input
                         key={index}
                         name={field}
-                        value={addresses[selectedAddressIndex][field]}
                         onChange={handleInputChange}
                         className="w-full p-2 border border-gray-300 rounded"
                         placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
@@ -131,7 +120,7 @@ const Address: React.FC = () => {
               )}
             </div>
             <div className="flex flex-col mt-4 space-y-2">
-              {addresses.map((address, index) => (
+              {/* {addresses.map((index) => (
                 <button
                   key={index}
                   className={`py-2 px-4 rounded ${
@@ -143,7 +132,7 @@ const Address: React.FC = () => {
                 >
                   Address {index + 1}
                 </button>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
@@ -169,7 +158,6 @@ const Address: React.FC = () => {
                     <input
                       key={index}
                       name={field}
-                      value={addresses[selectedAddressIndex][field]}
                       onChange={handleInputChange}
                       className="w-full p-2 border border-gray-300 rounded"
                       placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
@@ -187,7 +175,7 @@ const Address: React.FC = () => {
               </div>
             )}
             <div className="flex flex-col space-y-2">
-              {addresses.map((address, index) => (
+              {/* {addresses.map((address, index) => (
                 <button
                   key={index}
                   className={`py-2 px-4 rounded ${
@@ -199,7 +187,7 @@ const Address: React.FC = () => {
                 >
                   Address {index + 1}
                 </button>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>

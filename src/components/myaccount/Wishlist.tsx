@@ -1,14 +1,3 @@
-// import React from 'react';
-
-// const Wishlist: React.FC = () => {
-//   return (
-//     <div>
-//       whitslist
-//     </div>
-//   );
-// };
-
-// export default Wishlist;
 
 import React from "react";
 import images from "../../assets/images";
@@ -40,7 +29,9 @@ const cardData = [
   },
 ];
 
-const Card = ({ title, price, stockStatus, imageUrl }) => {
+
+
+const Card = ({ title, price, stockStatus, imageUrl }: {title: string, price: string, stockStatus: string, imageUrl: string}) => {
   return (
     <div className="relative p-4 w-full bg-white shadow-md rounded-md">
       <div

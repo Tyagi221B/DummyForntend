@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import images from "../../assets/images";
-import NewsletterSubscription from "../NewsletterSubscription";
 import { Link } from 'react-router-dom';
 
 interface Product {

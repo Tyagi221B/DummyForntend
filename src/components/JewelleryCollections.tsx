@@ -31,14 +31,8 @@ const JewelleryCollections: React.FC = () => {
           <div
             key={index}
             className="relative overflow-hidden cursor-pointer" // Add cursor-pointer for better UX
-            onMouseEnter={() =>
-              (document.querySelector(`#collection-${index}`).style.display =
-                "block")
-            }
-            onMouseLeave={() =>
-              (document.querySelector(`#collection-${index}`).style.display =
-                "none")
-            }
+            
+            
             onClick={handleCategoryClick} // Add onClick handler to navigate
           >
             <div className="overflow-hidden">
@@ -50,7 +44,7 @@ const JewelleryCollections: React.FC = () => {
             </div>
             <div
               id={`collection-${index}`}
-              className="absolute inset-0 h-[10%] text-center top-[80%] pt-4 bg-opacity-40 flex items-center justify-center hidden"
+              className="absolute inset-0 h-[10%] text-center top-[80%] pt-4 bg-opacity-40 items-center justify-center hidden"
             >
               <span className="text-white font-bold lg:text-5xl text-3xl">
                 {collection.name}
